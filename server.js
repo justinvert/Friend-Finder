@@ -8,6 +8,8 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+require("./routing/htmlRoutes")(app);
+
 app.listen(PORT, function() {
    console.log("Connection made on PORT " + PORT);
 });
