@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder - Survey</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+   
+<div class="container">
+    <div class="jumbotron">
+          <h1 class="text-left">Friend Finder</h1>
+          <hr>
+          <h2 class="text-left">Please fill out the survey below: </h2>
+          </div>
+
+          <h4>Name (Required)</h4>
+          <input type="text" id="name" class="form-control" required>
+          <h4>Link to Photo Image (Required)</h4>
+
+          <input type="text" id="photo" class="form-control" required>
+        </br>
+
+        <h2 style="color:blue;">Statement 1:</h2>
+        <h2></h2>
+          <select class="chosen-select" id="q1">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </br>
+    </br>
+        <h2 style="color:blue;">Statement 2:</h2>
+        <h2></h2>
+          <select class="chosen-select" id="q2">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </br>
+    </br>
+        <h2 style="color:blue;">Statement 3:</h2>
+        <h2></h2>
+          <select class="chosen-select" id="q3">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </br>
+    </br>
+        <h2 style="color:blue;">Statement 4:</h2>
+        <h2></h2>
+          <select class="chosen-select" id="q4">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </br>
+    </br>
+        <h2 style="color:blue;">Statement 5:</h2>
+        <h2></h2>
+          <select class="chosen-select" id="q5">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </br>
+    </br>
+        <h2 style="color:blue;">Statement 6:</h2>
+        <h2></h2>
+          <select class="chosen-select" id="q6">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </br>
+    </br>
+        <h2 style="color:blue;">Statement 7:</h2>
+        <h2></h2>
+          <select class="chosen-select" id="q7">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </br>
+    </br>
+        <h2 style="color:blue;">Statement 8:</h2>
+        <h2></h2>
+          <select class="chosen-select" id="q8">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </br>
+    </br>
+        <h2 style="color:blue;">Statement 9:</h2>
+        <h2></h2>
+          <select class="chosen-select" id="q9">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </br>
+    </br>
+        <h2 style="color:blue;">Statement 10:</h2>
+        <h2></h2>
+          <select class="chosen-select" id="q10">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </br>
+        </br>
+
+    </br>
+        <button type="submit" class="btn btn-primary" id="submit"> Submit</button>
+    </br>
+    </br>
+          <footer class="footer">
+              <strong><p><a href="/api/friends">API Friends List</a> | 
+                <a href="https://github.com/justinvert/Friend-Finder">GitHub Repo</a></p></strong>
+            </div>
+          </footer>
+
+<div class="modal fade" id="display" role="dialog">
+   <div class="modal-dialog">    
+    <div class="modal-content">
+         <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">You have been matched with: </h4>
+              </div>
+              <div class="modal-body">
+                  <h2 id="yourFriend"></h2>
+                  <img id="yourFriendPhoto"></h2>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+
+
+
+        </div>
+        <script type="text/javascript">
+        $('#submit').on("click", function(){
+            event.preventDefault();
+            var valueName = $('#name').val().trim();
+            var valuePhoto =  $('#photo').val().trim();
+
+if (valueName && valuePhoto){
+    var newFriend = {
+    name: $("#name").val().trim(),
+    photo: $("#photo").val().trim(),
+    scores:[
+    $("#q1").val().trim(),
+    $("#q2").val().trim(),
+    $("#q3").val().trim(),
+    $("#q4").val().trim(),
+    $("#q5").val().trim(),
+    $("#q6").val().trim(),
+    $("#q7").val().trim(),
+    $("#q8").val().trim(),
+    $("#q9").val().trim(),
+    $("#q10").val().trim() ]
+};
+
+ $.post("/api/friends", newFriend)
+ .then(function(data){
+     console.log(data);
+     $("#yourFriend").text(data.name);
+     $("#yourFriendPhoto").attr(data.photo);
+     $("#display").modal("show");
+ });
+}
+else{
+    alert("Please fill in all the sections before proceeding")
+}
+
+        });
+        
+        </script>
+</body>
+</html>
