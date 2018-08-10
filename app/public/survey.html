@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder - Survey</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -155,8 +156,8 @@
             </div>
           </footer>
 
-<div class="modal fade" id="display" role="dialog">
-   <div class="modal-dialog">    
+<div id="display"  tabindex="-1" role="dialog">
+<div class="modal-dialog">    
     <div class="modal-content">
          <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -164,7 +165,7 @@
               </div>
               <div class="modal-body">
                   <h2 id="yourFriend"></h2>
-                  <img src="" id="yourFriendPhoto"></h2>
+                  <img id="yourFriendPhoto">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -177,6 +178,7 @@
 
 
         <script type="text/javascript">
+        $(document).ready(function(){
         $('#submit').on("click", function(){
             event.preventDefault();
             var valueName =  $('#name').val().trim();
@@ -214,19 +216,19 @@ if (valueName && valuePhoto && selection1
     $("#q10").val().trim() ]
 };
 
-  var windowOpen = window.location.origin;
-$.post(windowOpen + "/api/friends" ,newFriend , function(data) {
+$.post("/api/friends", newFriend, function(data) {
      console.log(data);
      $("#yourFriend").text(data.name);
-     $("#yourFriendPhoto").attr('src',data.photo);
-     $("#display").modal("toggle");
+     $("#yourFriendPhoto").attr('src', data.photo);
+     $("#display").modal('show');
  });
+
 }
 else{
     alert("Please fill in all the sections before proceeding")
 }
-
         });
+    });
         
         </script>
 </body>

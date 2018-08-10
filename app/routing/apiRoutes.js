@@ -4,19 +4,17 @@ var friends = require('../data/friends');
 
 module.exports = function(app) {
     app.get("/api/friends", function(req, res) {
-        res.json(friendsData);
+        res.json(friends);
       });
 
       app.post('/api/friends', function(req, res) {
+          
+
         var userData = req.body;
+        console.log(userData)
         var userScores = userData.scores;
+        console.log(userScores)
         var totalDifference = 0;
-
-        for (var i = 0; i < friends.length; i++){
-            
-        }
-        });
-    
-
-};
-
+//Loop through all of the users in the friends array
+      });
+    }
