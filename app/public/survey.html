@@ -164,7 +164,7 @@
               </div>
               <div class="modal-body">
                   <h2 id="yourFriend"></h2>
-                  <img id="yourFriendPhoto"></h2>
+                  <img src="" id="yourFriendPhoto"></h2>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -173,18 +173,31 @@
               
             </div>
           </div>
-          
-
-
-
         </div>
+
+
         <script type="text/javascript">
         $('#submit').on("click", function(){
             event.preventDefault();
-            var valueName = $('#name').val().trim();
-            var valuePhoto =  $('#photo').val().trim();
+            var valueName =  $('#name').val().trim();
+            var valuePhoto = $('#photo').val().trim();
+            var selection1 = $("#q1").val().trim();
+            var selection2 = $("#q2").val().trim();
+            var selection3 = $("#q3").val().trim();
+            var selection4 = $("#q4").val().trim();
+            var selection5 = $("#q5").val().trim();
+            var selection6 = $("#q6").val().trim();
+            var selection7 = $("#q7").val().trim();
+            var selection8 = $("#q8").val().trim();
+            var selection9 = $("#q9").val().trim();
+            var selection10 = $("#q10").val().trim();
 
-if (valueName && valuePhoto){
+if (valueName && valuePhoto && selection1 
+&& selection2 && selection3 && selection4
+&& selection5 && selection6 && selection7
+&& selection8 && selection9 && selection10
+
+){
     var newFriend = {
     name: $("#name").val().trim(),
     photo: $("#photo").val().trim(),
@@ -201,12 +214,12 @@ if (valueName && valuePhoto){
     $("#q10").val().trim() ]
 };
 
- $.post("/api/friends", newFriend)
- .then(function(data){
+  var windowOpen = window.location.origin;
+$.post(windowOpen + "/api/friends" ,newFriend , function(data) {
      console.log(data);
      $("#yourFriend").text(data.name);
-     $("#yourFriendPhoto").attr(data.photo);
-     $("#display").modal("show");
+     $("#yourFriendPhoto").attr('src',data.photo);
+     $("#display").modal("toggle");
  });
 }
 else{
