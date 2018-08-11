@@ -1,6 +1,6 @@
 # Friend Finder App
 
-**Live Demo** hosted on <a href="https://heroku.com/">Heroku</a>
+<a href="https://friend-finder-demo-app.herokuapp.com/">**Live Demo**</a> hosted on <a href="https://heroku.com/">Heroku</a>
 
 ### Objectives
 1. Create an app that allows users to answer a variety of questions
